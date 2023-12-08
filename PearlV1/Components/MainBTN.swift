@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct MainBTN: View {
+    let action: () -> Void
+    let buttonText: String
+    let buttonColor: Color
+    let textColor: Color
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: action) {
+            Text(buttonText)
+                .foregroundColor(textColor)
+                .frame(width: 228, height: 38)
+                .background(buttonColor)
+                .cornerRadius(100)
+        }
     }
 }
 
+#if DEBUG
 #Preview {
-    MainBTN()
-}
+        MainBTN(
+            action: {
+                // Your action here
+            },
+            buttonText: "Tap me",
+            buttonColor: .black,
+            textColor: .white
+        )
+        .previewLayout(.sizeThatFits)
+    }
+#endif

@@ -17,25 +17,34 @@ struct ContentView: View {
         // testing
         TabView(selection: $pageIndex) {
             ForEach(pages.indices, id: \.self) { index in
-                VStack {
-                    Spacer()
-                    Splash(page: pages[index])
-                    Spacer()
-                    if index == pages.indices.last {
-                        Button(action: goToZero) {
-                            Text("Sign Up")
-                        }
-                        .buttonStyle(.bordered)
-                    } else {
-                        Button(action: { incrementPage(index: index) }) {
-                            Text("Next")
-                        }
+                ZStack {
+                    LinearGradient(
+                        gradient: Gradient(colors: [Color(hex: 0xDACBFF), Color(hex: 0xECE4FF)]),
+                        startPoint: .bottom,
+                        endPoint: .top
+                    )
+                    .edgesIgnoringSafeArea(.all)
+
+                    VStack {
+                        Spacer()
+                        Splash(page: pages[index])
+                        Spacer()
+
+                        MainBTN(
+                            action: { incrementPage(index: index) },
+                            buttonText: "Next",
+                            buttonColor: .black,
+                            textColor: .white
+                        )
+                        .padding(.top, 20)
+
+                        Spacer()
                     }
-                    Spacer()
+                    .tag(index)
                 }
-                .tag(index)
             }
         }
+        .ignoresSafeArea()
         .animation(.easeInOut(duration: TimeInterval(pageIndex)), value: pageIndex)
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .interactive))
@@ -49,9 +58,6 @@ struct ContentView: View {
         pageIndex = index + 1
     }
 
-    func goToZero() {
-        pageIndex = 0
-    }
 }
 
 #Preview {

@@ -35,12 +35,12 @@ struct Splash: View {
                     Text(page.name)
                         .font(.title)
                         .multilineTextAlignment(.leading)
-                        .foregroundColor(.white)
+                        .foregroundColor(.blackC)
 
                     Text(page.description)
                         .font(.subheadline)
                         .multilineTextAlignment(.leading)
-                        .foregroundColor(.white)
+                        .foregroundColor(.blackC)
                 }
             }
             .frame(width: 300)

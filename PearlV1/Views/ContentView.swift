@@ -27,7 +27,7 @@ struct ContentView: View {
 
                     VStack {
                         Spacer()
-                        Splash(page: pages[index])
+                        OnBoardingView(page: pages[index])
                         Spacer()
 
                         MainBTN(

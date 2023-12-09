@@ -25,7 +25,7 @@ struct PearlV1App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InitialView()
         }
         .modelContainer(sharedModelContainer)
     }

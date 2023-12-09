@@ -12,8 +12,8 @@
 		C1ADB00C2B2373C900B1BE85 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB00B2B2373C900B1BE85 /* Item.swift */; };
 		C1ADB00E2B2373CA00B1BE85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1ADB00D2B2373CA00B1BE85 /* Assets.xcassets */; };
 		C1ADB0112B2373CA00B1BE85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1ADB0102B2373CA00B1BE85 /* Preview Assets.xcassets */; };
-		C1ADB01B2B23759900B1BE85 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB01A2B23759900B1BE85 /* OnBoardingModel.swift */; };
-		C1ADB01D2B23762700B1BE85 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB01C2B23762700B1BE85 /* OnBoardingView.swift */; };
+		C1ADB01B2B23759900B1BE85 /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB01A2B23759900B1BE85 /* SplashModel.swift */; };
+		C1ADB01D2B23762700B1BE85 /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB01C2B23762700B1BE85 /* Splash.swift */; };
 		C1ADB0202B23CC0D00B1BE85 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB01F2B23CC0D00B1BE85 /* OTPTextField.swift */; };
 		C1ADB0222B23CF0400B1BE85 /* MainBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB0212B23CF0400B1BE85 /* MainBTN.swift */; };
 		C1ADB0242B247BF000B1BE85 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB0232B247BEF00B1BE85 /* LoaderView.swift */; };
@@ -26,8 +26,8 @@
 		C1ADB00B2B2373C900B1BE85 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		C1ADB00D2B2373CA00B1BE85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C1ADB0102B2373CA00B1BE85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C1ADB01A2B23759900B1BE85 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
-		C1ADB01C2B23762700B1BE85 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		C1ADB01A2B23759900B1BE85 /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
+		C1ADB01C2B23762700B1BE85 /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		C1ADB01F2B23CC0D00B1BE85 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
 		C1ADB0212B23CF0400B1BE85 /* MainBTN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBTN.swift; sourceTree = "<group>"; };
 		C1ADB0232B247BEF00B1BE85 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				C1ADB0092B2373C900B1BE85 /* ContentView.swift */,
-				C1ADB01C2B23762700B1BE85 /* OnBoardingView.swift */,
+				C1ADB01C2B23762700B1BE85 /* Splash.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				C1ADB00B2B2373C900B1BE85 /* Item.swift */,
-				C1ADB01A2B23759900B1BE85 /* OnBoardingModel.swift */,
+				C1ADB01A2B23759900B1BE85 /* SplashModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,10 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1ADB01B2B23759900B1BE85 /* OnBoardingModel.swift in Sources */,
+				C1ADB01B2B23759900B1BE85 /* SplashModel.swift in Sources */,
 				C1ADB00A2B2373C900B1BE85 /* ContentView.swift in Sources */,
 				C1ADB00C2B2373C900B1BE85 /* Item.swift in Sources */,
-				C1ADB01D2B23762700B1BE85 /* OnBoardingView.swift in Sources */,
+				C1ADB01D2B23762700B1BE85 /* Splash.swift in Sources */,
 				C1ADB0082B2373C900B1BE85 /* PearlV1App.swift in Sources */,
 				C1ADB0242B247BF000B1BE85 /* LoaderView.swift in Sources */,
 				C1ADB0222B23CF0400B1BE85 /* MainBTN.swift in Sources */,

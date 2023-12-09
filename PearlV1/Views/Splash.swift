@@ -8,7 +8,7 @@
 import SwiftUI
 // skin problems detection models
 //test
-struct OnBoardingView: View {
+struct Splash: View {
     var page: Page
     
     var body: some View {
@@ -50,7 +50,7 @@ struct OnBoardingView: View {
 }
 
 #Preview {
-    OnBoardingView(page: Page.samplePage)
+    Splash(page: Page.samplePage)
 }
 
 

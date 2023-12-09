@@ -19,7 +19,7 @@ struct ContentView: View {
             ForEach(pages.indices, id: \.self) { index in
                 VStack {
                     Spacer()
-                    OnBoardingView(page: pages[index])
+                    Splash(page: pages[index])
                     Spacer()
                     if index == pages.indices.last {
                         Button(action: goToZero) {

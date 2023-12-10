@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct GFNextButton: View {
+    var buttonAction: () -> Void
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            buttonAction()
+        } label: {
+            Circle()
+                .fill(Color.blackC)
+                .overlay {
+                    Image(systemName: "chevron.forward")
+                        .foregroundColor(.white)
+                }
+                .frame(width: 36, height: 36)
+        }
     }
 }
 
 #Preview {
-    GFNextButton()
+    GFNextButton(buttonAction: {})
 }

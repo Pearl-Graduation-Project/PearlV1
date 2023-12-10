@@ -30,12 +30,12 @@ struct ContentView: View {
                         OnBoardingView(page: pages[index])
                         Spacer()
 
-                        MainBTN(
-                            action: { incrementPage(index: index) },
-                            buttonText: "Next",
-                            buttonColor: .black,
-                            textColor: .white
-                        )
+                            MainBTN(
+                                action: { incrementPage(index: index) },
+                                buttonText: "Next",
+                                buttonColor: .black,
+                                textColor: .white
+                            )
                         .padding(.top, 20)
 
                         Spacer()

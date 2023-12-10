@@ -7,7 +7,6 @@
 
 import SwiftUI
 import SwiftData
-
 struct ContentView: View {
     @State private var pageIndex = 0
     private let pages: [Page] = Page.samplePages
@@ -17,34 +16,15 @@ struct ContentView: View {
         // testing
         TabView(selection: $pageIndex) {
             ForEach(pages.indices, id: \.self) { index in
-                ZStack {
-                    LinearGradient(
-                        gradient: Gradient(colors: [Color(hex: 0xDACBFF), Color(hex: 0xECE4FF)]),
-                        startPoint: .bottom,
-                        endPoint: .top
-                    )
-                    .edgesIgnoringSafeArea(.all)
-
                     VStack {
-                        Spacer()
-                        OnBoardingView(page: pages[index])
-                        Spacer()
-
-                            MainBTN(
-                                action: { incrementPage(index: index) },
-                                buttonText: "Next",
-                                buttonColor: .black,
-                                textColor: .white
-                            )
-                        .padding(.top, 20)
-
-                        Spacer()
+                        OnBoardingView(page: pages[index], isLastPage: pages[index].tag == 2, action: { incrementPage(index: index) })
+                                    .tag(index)
                     }
                     .tag(index)
                 }
             }
-        }
-        .ignoresSafeArea()
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .edgesIgnoringSafeArea(.all)
         .animation(.easeInOut(duration: TimeInterval(pageIndex)), value: pageIndex)
         .tabViewStyle(.page)
         .indexViewStyle(.page(backgroundDisplayMode: .interactive))

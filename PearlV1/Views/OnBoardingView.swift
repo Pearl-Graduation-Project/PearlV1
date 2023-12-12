@@ -52,13 +52,14 @@ struct OnBoardingView: View {
                             }
                             .padding(.top, 20)
                     } else {
+                        Spacer()
                         MainBTN(
                             action: action,
                             buttonText: "Next",
                             buttonColor: .black,
                             textColor: .white
                         )
-                        .padding(.top, 20)
+                        .padding(.top,20)
                     }
                 }
                 Spacer()

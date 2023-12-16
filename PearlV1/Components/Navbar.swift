@@ -6,15 +6,15 @@
 //
 import SwiftUI
 
-struct NavigationElement: Identifiable {
+struct NavigationElement<Destination: View>: Identifiable {
     let id = UUID()
     let title: String
     let imageName: String
-    let destination: Text
+    let destination: Destination
 }
 
 struct Navbar: View {
-    let navigationElements: [NavigationElement] = [
+    let navigationElements: [NavigationElement<Text>] = [
         NavigationElement(title: "Home", imageName: "HomeNotClicked", destination: Text("Element 1 Details")),
         NavigationElement(title: "Progress", imageName: "ProgressSF", destination: Text("Element 2 Details")),
         NavigationElement(title: "Products", imageName: "ProdcutsIconSF", destination: Text("Element 3 Details")),
@@ -28,21 +28,29 @@ struct Navbar: View {
                 HStack {
                     ForEach(navigationElements) { element in
                         Spacer()
-                        NavigationLink(destination: element.destination) {
-                            VStack {
-                                Image(element.imageName)
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                Text(element.title).customTextStyle()
-                            }
-                        }
+                        NavbarElementView(element: element)
                         Spacer()
                     }
                 }
                 .padding()
-                .frame(width: 350, height: 77)
-                .background(Color(#colorLiteral(red: 0.7803921699523926, green: 0.7058823704719543, blue: 1, alpha: 0.2))) // Background color
-                .cornerRadius(30)
+                .frame(width: Constants.navbarWidth, height: Constants.navbarHeight)
+                .background(Constants.navbarBackgroundColor)
+                .cornerRadius(Constants.navbarCornerRadius)
+            }
+        }
+    }
+}
+
+struct NavbarElementView<Destination: View>: View {
+    let element: NavigationElement<Destination>
+
+    var body: some View {
+        NavigationLink(destination: element.destination) {
+            VStack {
+                Image(element.imageName)
+                    .resizable()
+                    .frame(width: Constants.elementImageSize, height: Constants.elementImageSize)
+                Text(element.title).customTextStyle()
             }
         }
     }
@@ -52,15 +60,29 @@ extension View {
     func customTextStyle() -> some View {
         self
             .font(
-                Font.custom("Roboto", size: 10)
+                Font.custom("Roboto", size: Constants.customTextSize)
                     .weight(.bold)
             )
             .multilineTextAlignment(.center)
             .foregroundColor(.black)
-            .frame(maxWidth: .infinity, minHeight: 12, maxHeight: 12, alignment: .center)
+            .fixedSize(horizontal: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/, vertical: /*@START_MENU_TOKEN@*/true/*@END_MENU_TOKEN@*/)
+            .frame(maxWidth: .infinity,alignment: .center)
     }
 }
 
-#Preview {
+struct Constants {
+    static let navbarWidth: CGFloat = 350
+    static let navbarHeight: CGFloat = 77
+    static let navbarCornerRadius: CGFloat = 30
+    static let navbarBackgroundColor = Color(#colorLiteral(red: 0.7803921699523926, green: 0.7058823704719543, blue: 1, alpha: 0.2))
+
+    static let elementImageSize: CGFloat = 30
+    static let customTextSize: CGFloat = 10
+    static let customTextMinHeight: CGFloat = 12
+    static let customTextMaxHeight: CGFloat = 12
+}
+
+#Preview{
         Navbar()
 }
+

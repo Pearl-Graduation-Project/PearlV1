@@ -8,11 +8,37 @@
 import SwiftUI
 
 struct TextBox: View {
+    // MARK: - Properties
+    var placeholder: String
+    @Binding var text: String
+
+    // MARK: - Body
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 100)
+            .stroke(Color.lavander, lineWidth: 1)
+                   .frame(maxWidth: .infinity,maxHeight: 48)
+                   .overlay(
+                       HStack {
+                           if text.isEmpty {
+                               Text(placeholder)
+                                   .foregroundColor(.gray)
+                                   .padding(.leading, 16)
+                           }
+                           TextField("", text: $text)
+                               .padding(.leading, 16)
+                               .font(.body)
+                               .foregroundColor(.primary)
+                               .accentColor(.primary)
+                               .frame(height: 48)
+                       }
+                   )
+                //   .padding(.horizontal, 16)
     }
 }
 
+// MARK: - Preview
 #Preview {
-    TextBox()
+        TextBox(placeholder: "Username", text: .constant(""))
+            .padding()
+            .previewLayout(.sizeThatFits)
 }

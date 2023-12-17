@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C113F8CA2B251D1F00F809FB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113F8C92B251D1F00F809FB /* LoginView.swift */; };
-		C113F8CF2B251D5000F809FB /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113F8CE2B251D5000F809FB /* LoginViewModel.swift */; };
+		C113F8CA2B251D1F00F809FB /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113F8C92B251D1F00F809FB /* SignInView.swift */; };
 		C113F8D12B251DE300F809FB /* GFNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113F8D02B251DE300F809FB /* GFNextButton.swift */; };
 		C1277BC92B2BBDFE00A000D6 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BC82B2BBDFE00A000D6 /* Navbar.swift */; };
+		C1277BCB2B2F69F400A000D6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BCA2B2F69F400A000D6 /* SignInViewModel.swift */; };
+		C1277BCD2B2F6AEF00A000D6 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BCC2B2F6AEF00A000D6 /* TextBox.swift */; };
+		C1277BCF2B2F794C00A000D6 /* BackGroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BCE2B2F794C00A000D6 /* BackGroundGradient.swift */; };
 		C13A8DF22B263B8D00FA1725 /* OnBoardingViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A8DF12B263B8D00FA1725 /* OnBoardingViewContainer.swift */; };
 		C13A8DF42B264C4500FA1725 /* GetstartedBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */; };
 		C183E2B82B28F24B006B0E59 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C183E2B72B28F24B006B0E59 /* FirebaseAnalytics */; };
@@ -84,13 +86,16 @@
 		C1ADB0222B23CF0400B1BE85 /* MainBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB0212B23CF0400B1BE85 /* MainBTN.swift */; };
 		C1ADB0242B247BF000B1BE85 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB0232B247BEF00B1BE85 /* LoaderView.swift */; };
 		C1ADB0262B24ED5B00B1BE85 /* InitialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1ADB0252B24ED5B00B1BE85 /* InitialView.swift */; };
+		C1D920192B2F8A650073E6D5 /* PasswordBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1D920182B2F8A650073E6D5 /* PasswordBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C113F8C92B251D1F00F809FB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		C113F8CE2B251D5000F809FB /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		C113F8C92B251D1F00F809FB /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C113F8D02B251DE300F809FB /* GFNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFNextButton.swift; sourceTree = "<group>"; };
 		C1277BC82B2BBDFE00A000D6 /* Navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
+		C1277BCA2B2F69F400A000D6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		C1277BCC2B2F6AEF00A000D6 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
+		C1277BCE2B2F794C00A000D6 /* BackGroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundGradient.swift; sourceTree = "<group>"; };
 		C13A8DF12B263B8D00FA1725 /* OnBoardingViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewContainer.swift; sourceTree = "<group>"; };
 		C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetstartedBTN.swift; sourceTree = "<group>"; };
 		C183E2C12B28F435006B0E59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -106,6 +111,7 @@
 		C1ADB0212B23CF0400B1BE85 /* MainBTN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBTN.swift; sourceTree = "<group>"; };
 		C1ADB0232B247BEF00B1BE85 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		C1ADB0252B24ED5B00B1BE85 /* InitialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialView.swift; sourceTree = "<group>"; };
+		C1D920182B2F8A650073E6D5 /* PasswordBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,20 +184,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C113F8C82B251D1100F809FB /* LoginView */ = {
+		C113F8C82B251D1100F809FB /* SignInView */ = {
 			isa = PBXGroup;
 			children = (
-				C113F8C92B251D1F00F809FB /* LoginView.swift */,
+				C113F8C92B251D1F00F809FB /* SignInView.swift */,
 			);
-			path = LoginView;
+			path = SignInView;
 			sourceTree = "<group>";
 		};
-		C113F8CB2B251D2500F809FB /* LoginViewModel */ = {
+		C113F8CB2B251D2500F809FB /* SignInViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C113F8CE2B251D5000F809FB /* LoginViewModel.swift */,
+				C1277BCA2B2F69F400A000D6 /* SignInViewModel.swift */,
 			);
-			path = LoginViewModel;
+			path = SignInViewModel;
 			sourceTree = "<group>";
 		};
 		C1ADAFFB2B2373C900B1BE85 = {
@@ -236,7 +242,7 @@
 		C1ADB0172B2374EC00B1BE85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C113F8C82B251D1100F809FB /* LoginView */,
+				C113F8C82B251D1100F809FB /* SignInView */,
 				C1ADB0092B2373C900B1BE85 /* ContentView.swift */,
 				C1ADB01C2B23762700B1BE85 /* OnBoardingView.swift */,
 				C1ADB0252B24ED5B00B1BE85 /* InitialView.swift */,
@@ -248,7 +254,7 @@
 		C1ADB0182B2374F300B1BE85 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				C113F8CB2B251D2500F809FB /* LoginViewModel */,
+				C113F8CB2B251D2500F809FB /* SignInViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -271,6 +277,9 @@
 				C113F8D02B251DE300F809FB /* GFNextButton.swift */,
 				C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */,
 				C1277BC82B2BBDFE00A000D6 /* Navbar.swift */,
+				C1277BCC2B2F6AEF00A000D6 /* TextBox.swift */,
+				C1277BCE2B2F794C00A000D6 /* BackGroundGradient.swift */,
+				C1D920182B2F8A650073E6D5 /* PasswordBox.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -415,16 +424,19 @@
 				C113F8D12B251DE300F809FB /* GFNextButton.swift in Sources */,
 				C1277BC92B2BBDFE00A000D6 /* Navbar.swift in Sources */,
 				C1ADB00A2B2373C900B1BE85 /* ContentView.swift in Sources */,
-				C113F8CF2B251D5000F809FB /* LoginViewModel.swift in Sources */,
 				C1ADB00C2B2373C900B1BE85 /* Item.swift in Sources */,
+				C1D920192B2F8A650073E6D5 /* PasswordBox.swift in Sources */,
+				C1277BCD2B2F6AEF00A000D6 /* TextBox.swift in Sources */,
 				C1ADB01D2B23762700B1BE85 /* OnBoardingView.swift in Sources */,
 				C1ADB0262B24ED5B00B1BE85 /* InitialView.swift in Sources */,
 				C1ADB0082B2373C900B1BE85 /* PearlV1App.swift in Sources */,
 				C13A8DF42B264C4500FA1725 /* GetstartedBTN.swift in Sources */,
 				C1ADB0242B247BF000B1BE85 /* LoaderView.swift in Sources */,
+				C1277BCF2B2F794C00A000D6 /* BackGroundGradient.swift in Sources */,
 				C1ADB0222B23CF0400B1BE85 /* MainBTN.swift in Sources */,
-				C113F8CA2B251D1F00F809FB /* LoginView.swift in Sources */,
+				C113F8CA2B251D1F00F809FB /* SignInView.swift in Sources */,
 				C1ADB0202B23CC0D00B1BE85 /* OTPTextField.swift in Sources */,
+				C1277BCB2B2F69F400A000D6 /* SignInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

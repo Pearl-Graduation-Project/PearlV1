@@ -5,14 +5,25 @@
 //  Created by ElAmir Mansour on 19/12/2023.
 //
 
+// TimerView.swift
+
 import SwiftUI
 
 struct TimerView: View {
+    @Binding var timeRemaining: TimeInterval
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("\(Int(timeRemaining))")
+            .padding()
+            .onReceive(Timer.publish(every: 1, on: .main, in: .common).autoconnect()) { _ in
+                if timeRemaining > 0 {
+                    timeRemaining -= 1
+                }
+            }
     }
 }
 
+
 #Preview {
-    TimerView()
+    TimerView(timeRemaining: .constant(60.0)) // Use any initial time remaining value you prefer
 }

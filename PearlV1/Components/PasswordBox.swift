@@ -1,9 +1,3 @@
-//
-//  PasswordBox.swift
-//  PearlV1
-//
-//  Created by ElAmir Mansour on 17/12/2023.
-//
 import SwiftUI
 
 struct PasswordBox: View {
@@ -20,24 +14,31 @@ struct PasswordBox: View {
             .overlay(
                 HStack {
                     if text.isEmpty {
-                        Text(placeholder)
-                            .foregroundColor(.gray)
-                            .padding(.leading, 16)
-                    }
-                    if isPasswordVisible {
-                        TextField("", text: $text)
+                        TextField(placeholder, text: $text)
                             .padding(.leading, 16)
                             .font(.body)
                             .foregroundColor(.primary)
                             .accentColor(.primary)
                             .frame(height: 48)
+                            .multilineTextAlignment(.leading)
                     } else {
-                        SecureField("", text: $text)
-                            .padding(.leading, 16)
-                            .font(.body)
-                            .foregroundColor(.primary)
-                            .accentColor(.primary)
-                            .frame(height: 48)
+                        if isPasswordVisible {
+                            TextField("", text: $text)
+                                .padding(.leading, 16)
+                                .font(.body)
+                                .foregroundColor(.primary)
+                                .accentColor(.primary)
+                                .frame(height: 48)
+                                .multilineTextAlignment(.leading)
+                        } else {
+                            SecureField("", text: $text)
+                                .padding(.leading, 16)
+                                .font(.body)
+                                .foregroundColor(.primary)
+                                .accentColor(.primary)
+                                .frame(height: 48)
+                                .multilineTextAlignment(.leading)
+                        }
                     }
                     Button(action: {
                         isPasswordVisible.toggle()
@@ -53,7 +54,7 @@ struct PasswordBox: View {
 
 // MARK: - Preview
 #Preview {
-    PasswordBox(placeholder: "Password", text: .constant(""))
+    PasswordBox(placeholder: "Password new password", text: .constant(""))
         .padding()
         .previewLayout(.sizeThatFits)
 }

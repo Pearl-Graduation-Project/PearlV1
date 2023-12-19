@@ -10,6 +10,8 @@ struct SignInView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var isPasswordVisible = false
+    @StateObject private var forgotPasswordViewModel = ForgotPasswordViewModel()
+     @State private var isForgotPasswordPresented = false
 
     var body: some View {
         VStack(spacing: 16) {
@@ -40,10 +42,13 @@ struct SignInView: View {
             HStack {
                 Spacer()
                 Button("Forgot Your Password?") {
-                    // Handle forgot password action
+                    isForgotPasswordPresented.toggle()
                 }
                 .foregroundColor(.black)
                 .padding(.top, 8)
+                .sheet(isPresented: $isForgotPasswordPresented) {
+                    ForgotPasswordView(viewModel: forgotPasswordViewModel)
+                }
             }
 
             MainBTN(

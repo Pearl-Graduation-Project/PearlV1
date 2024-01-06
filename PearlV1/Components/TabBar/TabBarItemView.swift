@@ -8,11 +8,42 @@
 import SwiftUI
 
 struct TabBarItemView: View {
+    let index: Int
+    @Binding var selectedTab: Int
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            selectedTab = index
+        }) {
+            VStack {
+                Image(selectedTab == index ? Constants.tabSelectedImages[index] : Constants.tabImages[index])
+                    .resizable()
+                    .frame(width: Constants.elementImageSize, height: Constants.elementImageSize)
+                Text(Constants.tabTitles[index]).customTextStyle()
+            }
+        }
+        .foregroundColor(selectedTab == index ? .blue : .black)
     }
 }
 
+
+
+
+
 #Preview {
-    TabBarItemView()
+    TabBarItemView(index: 0, selectedTab: .constant(0))
+}
+
+extension Text {
+    func customTextStyle() -> some View {
+        self
+            .font(
+                Font.custom("Roboto", size: Constants.customTextSize)
+                    .weight(.bold)
+            )
+            .multilineTextAlignment(.center)
+            .foregroundColor(.black)
+            .fixedSize(horizontal: true, vertical: true)
+            .frame(maxWidth: .infinity, alignment: .center)
+    }
 }

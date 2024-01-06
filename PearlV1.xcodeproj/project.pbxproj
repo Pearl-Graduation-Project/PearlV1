@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		C113F8CA2B251D1F00F809FB /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113F8C92B251D1F00F809FB /* SignInView.swift */; };
 		C113F8D12B251DE300F809FB /* GFNextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C113F8D02B251DE300F809FB /* GFNextButton.swift */; };
-		C1277BC92B2BBDFE00A000D6 /* Navbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BC82B2BBDFE00A000D6 /* Navbar.swift */; };
+		C1277BC92B2BBDFE00A000D6 /* TabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BC82B2BBDFE00A000D6 /* TabBarViewModel.swift */; };
 		C1277BCB2B2F69F400A000D6 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BCA2B2F69F400A000D6 /* SignInViewModel.swift */; };
 		C1277BCD2B2F6AEF00A000D6 /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BCC2B2F6AEF00A000D6 /* TextBox.swift */; };
 		C1277BCF2B2F794C00A000D6 /* BackGroundGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1277BCE2B2F794C00A000D6 /* BackGroundGradient.swift */; };
+		C12AF3412B493F8800F7D618 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AF3402B493F8800F7D618 /* TabBarView.swift */; };
+		C12AF3432B493F9800F7D618 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AF3422B493F9800F7D618 /* TabBarItemView.swift */; };
+		C12AF3452B49412400F7D618 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AF3442B49412400F7D618 /* Constants.swift */; };
 		C13A8DF22B263B8D00FA1725 /* OnBoardingViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A8DF12B263B8D00FA1725 /* OnBoardingViewContainer.swift */; };
 		C13A8DF42B264C4500FA1725 /* GetstartedBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */; };
 		C183E2B82B28F24B006B0E59 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C183E2B72B28F24B006B0E59 /* FirebaseAnalytics */; };
@@ -100,10 +103,13 @@
 /* Begin PBXFileReference section */
 		C113F8C92B251D1F00F809FB /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		C113F8D02B251DE300F809FB /* GFNextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFNextButton.swift; sourceTree = "<group>"; };
-		C1277BC82B2BBDFE00A000D6 /* Navbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navbar.swift; sourceTree = "<group>"; };
+		C1277BC82B2BBDFE00A000D6 /* TabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewModel.swift; sourceTree = "<group>"; };
 		C1277BCA2B2F69F400A000D6 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		C1277BCC2B2F6AEF00A000D6 /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		C1277BCE2B2F794C00A000D6 /* BackGroundGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackGroundGradient.swift; sourceTree = "<group>"; };
+		C12AF3402B493F8800F7D618 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		C12AF3422B493F9800F7D618 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		C12AF3442B49412400F7D618 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C13A8DF12B263B8D00FA1725 /* OnBoardingViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewContainer.swift; sourceTree = "<group>"; };
 		C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetstartedBTN.swift; sourceTree = "<group>"; };
 		C183E2C12B28F435006B0E59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -214,6 +220,17 @@
 				C1277BCA2B2F69F400A000D6 /* SignInViewModel.swift */,
 			);
 			path = SignInViewModel;
+			sourceTree = "<group>";
+		};
+		C12AF33F2B493F3500F7D618 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C1277BC82B2BBDFE00A000D6 /* TabBarViewModel.swift */,
+				C12AF3402B493F8800F7D618 /* TabBarView.swift */,
+				C12AF3422B493F9800F7D618 /* TabBarItemView.swift */,
+				C12AF3442B49412400F7D618 /* Constants.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		C19FA0062B31D9DE008006A1 /* Forgot Password */ = {
@@ -327,12 +344,12 @@
 		C1ADB01E2B23CBD500B1BE85 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C12AF33F2B493F3500F7D618 /* TabBar */,
 				C1ADB01F2B23CC0D00B1BE85 /* OTPTextField.swift */,
 				C1ADB0212B23CF0400B1BE85 /* MainBTN.swift */,
 				C1ADB0232B247BEF00B1BE85 /* LoaderView.swift */,
 				C113F8D02B251DE300F809FB /* GFNextButton.swift */,
 				C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */,
-				C1277BC82B2BBDFE00A000D6 /* Navbar.swift */,
 				C1277BCC2B2F6AEF00A000D6 /* TextBox.swift */,
 				C1277BCE2B2F794C00A000D6 /* BackGroundGradient.swift */,
 				C1D920182B2F8A650073E6D5 /* PasswordBox.swift */,
@@ -476,10 +493,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19FA0102B31F1C6008006A1 /* OTPView.swift in Sources */,
+				C12AF3432B493F9800F7D618 /* TabBarItemView.swift in Sources */,
+				C12AF3412B493F8800F7D618 /* TabBarView.swift in Sources */,
 				C13A8DF22B263B8D00FA1725 /* OnBoardingViewContainer.swift in Sources */,
 				C1ADB01B2B23759900B1BE85 /* OnBoardingModel.swift in Sources */,
+				C12AF3452B49412400F7D618 /* Constants.swift in Sources */,
 				C113F8D12B251DE300F809FB /* GFNextButton.swift in Sources */,
-				C1277BC92B2BBDFE00A000D6 /* Navbar.swift in Sources */,
+				C1277BC92B2BBDFE00A000D6 /* TabBarViewModel.swift in Sources */,
 				C1ADB00A2B2373C900B1BE85 /* ContentView.swift in Sources */,
 				C19FA0152B31F2A3008006A1 /* TimerView.swift in Sources */,
 				C1ADB00C2B2373C900B1BE85 /* Item.swift in Sources */,

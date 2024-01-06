@@ -8,11 +8,36 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @ObservedObject var viewModel: TabBarViewModel
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                HStack(spacing: 0) {
+                    ForEach(0..<5) { index in
+                        VStack {
+                            TabBarItemView(index: index, selectedTab: $viewModel.selectedTab)
+                            if viewModel.selectedTab == index {
+                                Image("TopRectangle")
+                                    .resizable()
+                                    .frame(width: 26, height: 5)
+                                    .offset(y: -Constants.navbarHeight / 2)
+                                    .padding(.top, -Constants.navbarHeight / 2)
+                            }
+                        }
+                        .frame(height: Constants.navbarHeight)
+                        Spacer()
+                    }
+                }
+            }
+            .padding()
+            .background(Constants.navbarBackgroundColor)
+            .cornerRadius(Constants.navbarCornerRadius)
+        }
     }
 }
 
 #Preview {
-    TabBarView()
-}
+    let viewModel = TabBarViewModel()
+            return TabBarView(viewModel: viewModel)
+        }

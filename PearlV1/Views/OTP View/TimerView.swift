@@ -25,5 +25,5 @@ struct TimerView: View {
 
 
 #Preview {
-    TimerView(timeRemaining: .constant(60.0)) // Use any initial time remaining value you prefer
+    TimerView(timeRemaining: .constant(60.0)) 
 }

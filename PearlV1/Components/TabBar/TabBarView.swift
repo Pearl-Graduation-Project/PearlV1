@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabBarView: View {
     @ObservedObject var viewModel: TabBarViewModel
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -39,5 +39,7 @@ struct TabBarView: View {
 
 #Preview {
     let viewModel = TabBarViewModel()
-            return TabBarView(viewModel: viewModel)
-        }
+    return TabBarView(viewModel: viewModel)
+        .previewLayout(.fixed(width: 400, height: 120))
+
+}

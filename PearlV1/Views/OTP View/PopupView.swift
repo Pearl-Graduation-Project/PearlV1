@@ -35,6 +35,8 @@ struct PopupView: View {
                     )
                     .multilineTextAlignment(.center)
                     .foregroundColor(.black)
+                    .frame(width: 258, alignment: .top)
+
 
                 Text(message)
                     .font(Font.custom("Roboto", size: 12))

@@ -18,6 +18,8 @@
 		C12AF3452B49412400F7D618 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AF3442B49412400F7D618 /* Constants.swift */; };
 		C13A8DF22B263B8D00FA1725 /* OnBoardingViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A8DF12B263B8D00FA1725 /* OnBoardingViewContainer.swift */; };
 		C13A8DF42B264C4500FA1725 /* GetstartedBTN.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */; };
+		C15D3A002B55B09A0079C1F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D39FF2B55B09A0079C1F2 /* SignUpView.swift */; };
+		C15D3A032B55B3BE0079C1F2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15D3A022B55B3BE0079C1F2 /* SignUpViewModel.swift */; };
 		C183E2B82B28F24B006B0E59 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C183E2B72B28F24B006B0E59 /* FirebaseAnalytics */; };
 		C183E2BA2B28F24B006B0E59 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = C183E2B92B28F24B006B0E59 /* FirebaseAnalyticsOnDeviceConversion */; };
 		C183E2BC2B28F24B006B0E59 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C183E2BB2B28F24B006B0E59 /* FirebaseAnalyticsSwift */; };
@@ -112,6 +114,8 @@
 		C12AF3442B49412400F7D618 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C13A8DF12B263B8D00FA1725 /* OnBoardingViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewContainer.swift; sourceTree = "<group>"; };
 		C13A8DF32B264C4500FA1725 /* GetstartedBTN.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetstartedBTN.swift; sourceTree = "<group>"; };
+		C15D39FF2B55B09A0079C1F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C15D3A022B55B3BE0079C1F2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		C183E2C12B28F435006B0E59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C19FA0072B31D9FD008006A1 /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		C19FA00A2B31DA55008006A1 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
@@ -233,6 +237,22 @@
 			path = TabBar;
 			sourceTree = "<group>";
 		};
+		C15D39FE2B55B07D0079C1F2 /* SignUpView */ = {
+			isa = PBXGroup;
+			children = (
+				C15D39FF2B55B09A0079C1F2 /* SignUpView.swift */,
+			);
+			path = SignUpView;
+			sourceTree = "<group>";
+		};
+		C15D3A012B55B3930079C1F2 /* SignUpViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C15D3A022B55B3BE0079C1F2 /* SignUpViewModel.swift */,
+			);
+			path = SignUpViewModel;
+			sourceTree = "<group>";
+		};
 		C19FA0062B31D9DE008006A1 /* Forgot Password */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +331,7 @@
 		C1ADB0172B2374EC00B1BE85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C15D39FE2B55B07D0079C1F2 /* SignUpView */,
 				C19FA00E2B31F1B3008006A1 /* OTP View */,
 				C19FA0092B31DA46008006A1 /* Forgot Password */,
 				C113F8C82B251D1100F809FB /* SignInView */,
@@ -325,6 +346,7 @@
 		C1ADB0182B2374F300B1BE85 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C15D3A012B55B3930079C1F2 /* SignUpViewModel */,
 				C19FA0112B31F1F8008006A1 /* OTP ViewModel */,
 				C19FA0062B31D9DE008006A1 /* Forgot Password */,
 				C113F8CB2B251D2500F809FB /* SignInViewModel */,
@@ -500,6 +522,7 @@
 				C12AF3452B49412400F7D618 /* Constants.swift in Sources */,
 				C113F8D12B251DE300F809FB /* GFNextButton.swift in Sources */,
 				C1277BC92B2BBDFE00A000D6 /* TabBarViewModel.swift in Sources */,
+				C15D3A032B55B3BE0079C1F2 /* SignUpViewModel.swift in Sources */,
 				C1ADB00A2B2373C900B1BE85 /* ContentView.swift in Sources */,
 				C19FA0152B31F2A3008006A1 /* TimerView.swift in Sources */,
 				C1ADB00C2B2373C900B1BE85 /* Item.swift in Sources */,
@@ -508,6 +531,7 @@
 				C1ADB01D2B23762700B1BE85 /* OnBoardingView.swift in Sources */,
 				C1ADB0262B24ED5B00B1BE85 /* InitialView.swift in Sources */,
 				C19FA0172B31F792008006A1 /* ChangePasswordView.swift in Sources */,
+				C15D3A002B55B09A0079C1F2 /* SignUpView.swift in Sources */,
 				C1ADB0082B2373C900B1BE85 /* PearlV1App.swift in Sources */,
 				C13A8DF42B264C4500FA1725 /* GetstartedBTN.swift in Sources */,
 				C1ADB0242B247BF000B1BE85 /* LoaderView.swift in Sources */,

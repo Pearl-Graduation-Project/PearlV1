@@ -11,83 +11,92 @@ struct SignInView: View {
     @State private var password = ""
     @State private var isPasswordVisible = false
     @StateObject private var forgotPasswordViewModel = ForgotPasswordViewModel()
-     @State private var isForgotPasswordPresented = false
-
+    @State private var isForgotPasswordPresented = false
+    
     var body: some View {
-        VStack(spacing: 16) {
-            Text("Sign In")
-                .font(.title)
-                .fontWeight(.bold)
-                .padding(.top, 64)
+        NavigationView{
+            VStack(spacing: 16) {
+                Text("Sign In")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding(.top, 64)
+                
+                Text("Sign In to your account to continue")
+                    .foregroundColor(.gray)
+                    .font(.subheadline)
+                    .padding(.bottom, 32)
+                
+                VStack(alignment: .leading,spacing: 8) {
+                    Text("Email Address")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                    TextBox(placeholder: "Email", text: $email)
+                }
+                
+                VStack(alignment: .leading ,spacing: 8) {
+                    Text("Password")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                    PasswordBox(placeholder: "Password", text: $password)
+                }
+                
+                HStack {
+                    Spacer()
+                    Button("Forgot Your Password?") {
+                        isForgotPasswordPresented.toggle()
+                    }
+                    .foregroundColor(.black)
+                    .padding(.top, 8)
+                    .sheet(isPresented: $isForgotPasswordPresented) {
+                        ForgotPasswordView(viewModel: forgotPasswordViewModel)
+                    }
+                }
+                
+                MainBTN(
+                    action: {
+                        // Handle sign-in action
+                    },
+                    buttonText: "Sign In",
+                    buttonColor: .black,
+                    textColor: .white
+                )
 
-            Text("Sign In to your account to continue")
-                .foregroundColor(.gray)
-                .font(.subheadline)
-                .padding(.bottom, 32)
-
-            VStack(alignment: .leading,spacing: 8) {
-                Text("Email Address")
-                    .font(.headline)
-                    .foregroundColor(.primary)
-                TextBox(placeholder: "Email", text: $email)
-            }
-
-            VStack(alignment: .leading ,spacing: 8) {
-                Text("Password")
-                    .font(.headline)
-                    .foregroundColor(.primary)
-                PasswordBox(placeholder: "Password", text: $password)
-            }
-
-            HStack {
+                HStack {
+                    Text("Don't have an account?")
+                    NavigationLink(
+                        destination: SignUpView(),
+                        label: {
+                            Text("Sign Up")
+                                .font(.system(size: 18)) // Set the desired font size
+                            
+                                .underline()
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.black)
+                        }
+                    )}
+                
+                Text("Or continue with")
+                    .foregroundColor(.gray)
+                    .padding(.top, 16)
+                
+                // Add buttons for social media or other authentication methods here
+                HStack(spacing: 16) {
+                    SocialButton(imageName: "google", color: .red) {
+                        // Handle Google sign-in action
+                    }
+                    
+                    SocialButton(imageName: "facebook", color: .blue) {
+                        // Handle Facebook sign-in action
+                    }
+                }
+                
                 Spacer()
-                Button("Forgot Your Password?") {
-                    isForgotPasswordPresented.toggle()
-                }
-                .foregroundColor(.black)
-                .padding(.top, 8)
-                .sheet(isPresented: $isForgotPasswordPresented) {
-                    ForgotPasswordView(viewModel: forgotPasswordViewModel)
-                }
             }
+            .padding(16)
+            .background(BackgroundGradient.combinedGradient)
+            .navigationBarHidden(true) // Hide the navigation bar if you don't want it to be visible in this view
 
-            MainBTN(
-                action: {
-                    // Handle sign-in action
-                },
-                buttonText: "Sign In",
-                buttonColor: .black,
-                textColor: .white
-            )
-
-            HStack {
-                Text("Don't have an account?")
-                Button("Sign Up") {
-                    // Handle sign-up action
-                }
-                .foregroundColor(.black)
-                .bold()
-            }
-
-            Text("Or continue with")
-                .foregroundColor(.gray)
-                .padding(.top, 16)
-
-            // Add buttons for social media or other authentication methods here
-            HStack(spacing: 16) {
-                SocialButton(imageName: "google", color: .red) {
-                    // Handle Google sign-in action
-                }
-
-                SocialButton(imageName: "facebook", color: .blue) {
-                    // Handle Facebook sign-in action
-                }
-            }
-
-            Spacer()
         }
-        .padding(16)
-        .background(BackgroundGradient.combinedGradient)
     }
 }
 

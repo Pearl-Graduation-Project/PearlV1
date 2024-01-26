@@ -28,7 +28,9 @@ struct TextBox: View {
                         .frame(height: 48)
                 }
             )
+            .frame(height: 48)
     }
+    
 }
 
 // MARK: - Preview

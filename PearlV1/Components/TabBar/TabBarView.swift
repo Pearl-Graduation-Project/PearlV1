@@ -40,6 +40,6 @@ struct TabBarView: View {
 #Preview {
     let viewModel = TabBarViewModel()
     return TabBarView(viewModel: viewModel)
-        .previewLayout(.fixed(width: 400, height: 120))
+       // .previewLayout(.fixed(width: 400, height: 120))
 
 }

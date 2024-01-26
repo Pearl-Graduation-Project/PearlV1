@@ -4,8 +4,9 @@ import SwiftUI
 struct SignUpView: View {
     @StateObject private var signUpViewModel = SignUpViewModel()
 
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
-        NavigationView {
             VStack(spacing: 16) {
                 Text("Sign Up")
                     .font(.title)
@@ -108,17 +109,15 @@ struct SignUpView: View {
                     
                         .foregroundColor(.black)
                     
-                    NavigationLink(
-                        destination: SignInView(),
-                        label: {
-                            Text("Sign in")
-                                .font(.system(size: 11)) // Set the desired font size
-                            
-                                .underline()
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                                .foregroundColor(.black)
-                        }
-                    )
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Sign in")
+                            .font(.system(size: 11)) // Set the desired font size
+                            .underline()
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(.black)
+                    }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading) // Force the HStack to take up the full width
                 
@@ -142,7 +141,6 @@ struct SignUpView: View {
             
         }
     }
-}
 
 #Preview {
     SignUpView()

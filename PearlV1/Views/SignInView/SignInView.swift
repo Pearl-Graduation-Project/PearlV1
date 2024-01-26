@@ -12,9 +12,9 @@ struct SignInView: View {
     @State private var isPasswordVisible = false
     @StateObject private var forgotPasswordViewModel = ForgotPasswordViewModel()
     @State private var isForgotPasswordPresented = false
-    
+
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack(spacing: 16) {
                 Text("Sign In")
                     .font(.title)

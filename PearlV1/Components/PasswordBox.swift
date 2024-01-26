@@ -49,6 +49,7 @@ struct PasswordBox: View {
                     }
                 }
             )
+            .frame(height: 48)
     }
 }
 

@@ -38,7 +38,7 @@ struct PearlV1App: App {
 
     var body: some Scene {
         WindowGroup {
-            InitialView()
+            SignInView()
         }
         .modelContainer(sharedModelContainer)
     }
